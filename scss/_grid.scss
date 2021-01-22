@@ -1,0 +1,28 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+    border: 1px solid black;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.pac-dot {
+    background-color: rgb(11, 11, 39);
+    border: 5px solid white;
+    box-sizing: border-box;
+
+}
+
+.wall {
+    background-color: rgb(18, 18, 58);
+}
+
+.power-pellet {
+    background-color: rgb(160, 8, 109);
+    border-radius: 10px;
+}

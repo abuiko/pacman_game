@@ -66,5 +66,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     createBoard();
 
+    // starting pac-man position
+    let pacmanCurrentIndex = 490;
+    squares[pacmanCurrentIndex].classList.add("pac-man");
+
+    // move pac-man 
+    function movePacman(e) {
+        squares[pacmanCurrentIndex].classList.remove('pac-man');
+
+        switch (e.keyCode) {
+            case 37: //arrowleft
+                if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('wall'))
+                    pacmanCurrentIndex -= 1;
+                break;
+            case 38: //arrowup
+                if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - width].classList.contains('wall'))
+                    pacmanCurrentIndex -= width;
+                break;
+            case 39: //arrowright
+                if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains("wall"))
+                    pacmanCurrentIndex += 1;
+                break;
+            case 40: //arrowdown
+                if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + width].classList.contains("wall"))
+                    pacmanCurrentIndex += width;
+                break;
+        }
+        squares[pacmanCurrentIndex].classList.add("pac-man");
+    }
+    document.addEventListener("keyup", movePacman);
 
 })

@@ -1,73 +1,92 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 560px;
-    height: 560px;
+    width: 840px;
+    height: 840px;
     border: 1px solid black;
 }
 
 .grid div {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .pac-dot {
-    background-color: rgb(11, 11, 39);
-    border: 5px solid white;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid $path-color;
     box-sizing: border-box;
-
 }
 
 .wall {
-    background-color: rgb(18, 18, 58);
+    background-color: $background-color;
+}
+
+.power-pellet,
+.ghost-lair,
+.blinky,
+.pinky,
+.inky,
+.clyde,
+.scared-ghost,
+.pac-man,
+.background {
+    background-color: $path-color;
 }
 
 .power-pellet {
-    background-color: rgb(160, 8, 109);
-    border-radius: 10px;
+    background-image: url(../img/orange.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
 
 .blinky {
-    background-color: red;
+    background-image: url(../img/red.png);
+    background-size: cover;
     border: 0px;
 }
 
 .pinky {
-    background-color: pink;
+
+    background-image: url(../img/pink.png);
+
+    background-size: cover;
     border: 0px;
+
 }
 
 .inky {
-    background-color: rgb(0, 4, 255);
+    background-image: url(../img/cyan.png);
+
+    background-size: cover;
     border: 0px;
+
 }
 
 .clyde {
-    background-color: orange;
+    background-image: url(../img/green.png);
+
+    background-size: cover;
     border: 0px;
+
 }
 
 .scared-ghost {
-    background-color: rgb(142, 255, 89);
+    background-image: url('../img/scared.png');
+
+    background-size: cover;
     border: 0px;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 .pac-man {
-    background-color: rgb(0, 255, 221);
-    border-radius: 10px;
+    background-image: url('../img/pacman.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+
+
 }
